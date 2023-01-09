@@ -262,6 +262,26 @@
     "@jridgewell/resolve-uri" "^3.0.3"
     "@jridgewell/sourcemap-codec" "^1.4.10"
 
+"@liveblocks/client@0.19.4", "@liveblocks/client@^0.19.4":
+  version "0.19.4"
+  resolved "https://registry.yarnpkg.com/@liveblocks/client/-/client-0.19.4.tgz#e77e4119e49fa96b4a7b6766a6977c2b3f7c40eb"
+  integrity sha512-k0G4RNY30trZeLPY00D87dUpxlNHrJ73ULzFRlYr1aZZ5RG3J6M6LcqK5rJ+U3nL7vRPplTlNlP8J/gxewhtAw==
+  dependencies:
+    "@liveblocks/core" "0.19.4"
+
+"@liveblocks/core@0.19.4":
+  version "0.19.4"
+  resolved "https://registry.yarnpkg.com/@liveblocks/core/-/core-0.19.4.tgz#8d34354adf28ea7ab46d644130243ae038390247"
+  integrity sha512-Nbj8Bb5Px9N7inGXb8j9KO27++EL4/15x4BQPEx+TcwPgdcHQIIHAwoq6KEG8t1V/lQk9FB6W5wgXGOMTpbQQg==
+
+"@liveblocks/zustand@^0.19.4":
+  version "0.19.4"
+  resolved "https://registry.yarnpkg.com/@liveblocks/zustand/-/zustand-0.19.4.tgz#31224a3d8d8808093fbff76be326ccb9e9c7f37f"
+  integrity sha512-O8BECMXRaTV2DkqUaDPtfvCa0yswzGcxr8AEZWDSK8KNcOxq4eqk6GYEYM5NvIDHTOBFcDqOzC85289fgz0svA==
+  dependencies:
+    "@liveblocks/client" "0.19.4"
+    "@liveblocks/core" "0.19.4"
+
 "@next/env@13.1.1":
   version "13.1.1"
   resolved "https://registry.yarnpkg.com/@next/env/-/env-13.1.1.tgz#6ff26488dc7674ef2bfdd1ca28fe43eed1113bea"
@@ -3581,6 +3601,11 @@ uri-js@^4.2.2:
   dependencies:
     punycode "^2.1.0"
 
+use-sync-external-store@1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/use-sync-external-store/-/use-sync-external-store-1.2.0.tgz#7dbefd6ef3fe4e767a0cf5d7287aacfb5846928a"
+  integrity sha512-eEgnFxGQ1Ife9bzYs6VLi8/4X6CObHMw9Qr9tPY43iKwsPw8xE8+EFsf/2cFZ5S3esXgpWgtSCtLNS41F+sKPA==
+
 util-deprecate@^1.0.1, util-deprecate@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/util-deprecate/-/util-deprecate-1.0.2.tgz#450d4dc9fa70de732762fbd2d4a28981419a0ccf"
@@ -3719,3 +3744,10 @@ zod@^3.20.2:
   version "3.20.2"
   resolved "https://registry.yarnpkg.com/zod/-/zod-3.20.2.tgz#068606642c8f51b3333981f91c0a8ab37dfc2807"
   integrity sha512-1MzNQdAvO+54H+EaK5YpyEy0T+Ejo/7YLHS93G3RnYWh5gaotGHwGeN/ZO687qEDU2y4CdStQYXVHIgrUl5UVQ==
+
+zustand@^4.2.0:
+  version "4.2.0"
+  resolved "https://registry.yarnpkg.com/zustand/-/zustand-4.2.0.tgz#f6ef9e63794eda9b296979578538a6df6be3e1b0"
+  integrity sha512-eNwaDoD2FYVnMgtNxiMUhTJO780wonZUzJrPQTLYI0erSIMZF8cniWFW22kGQUECd8rdHRJ/ZJL2XO54c9Ttuw==
+  dependencies:
+    use-sync-external-store "1.2.0"
