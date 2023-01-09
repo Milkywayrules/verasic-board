@@ -1,3 +1,7 @@
+import Link from 'next/link'
+
+import CONSTS from '~config/consts'
+
 export default function Analytics() {
   return (
     <div className="mx-auto px-6 py-12 sm:py-16 md:max-w-full md:px-24 lg:px-8 lg:py-20">
@@ -20,8 +24,8 @@ export default function Analytics() {
             </p>
           </div>
           <div className="flex">
-            <a
-              href="/"
+            <Link
+              href={CONSTS.url.auth.login}
               aria-label=""
               className="inline-flex items-center font-semibold text-indigo-600 transition-colors duration-200 hover:text-indigo-400"
             >
@@ -29,7 +33,7 @@ export default function Analytics() {
               <svg className="ml-2 inline-block w-3" fill="currentColor" viewBox="0 0 12 12">
                 <path d="M9.707,5.293l-5-5A1,1,0,0,0,3.293,1.707L7.586,6,3.293,10.293a1,1,0,1,0,1.414,1.414l5-5A1,1,0,0,0,9.707,5.293Z" />
               </svg>
-            </a>
+            </Link>
           </div>
         </div>
         <div className="relative">
