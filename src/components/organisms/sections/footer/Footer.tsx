@@ -76,6 +76,7 @@ const data = {
   },
   bottom: {
     left: (
+      // external link
       <>
         © 2023{' '}
         <a href="https://dioilham.com/" className="hover:underline">
@@ -130,6 +131,7 @@ export default function Footer() {
                 {items.map(item => (
                   <li key={item.text}>
                     {item.target ? (
+                      // external link
                       <a
                         href={item.href}
                         target={item.target}
@@ -159,6 +161,7 @@ export default function Footer() {
         </span>
         <div className="mt-6 flex space-x-6 sm:mt-0 sm:justify-center">
           {data.bottom.right.map(item => (
+            // external link
             <a
               key={item.text}
               href={item.url}
