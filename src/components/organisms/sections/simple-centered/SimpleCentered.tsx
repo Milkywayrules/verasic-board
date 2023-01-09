@@ -36,17 +36,15 @@ interface Props {
       }
     }
   }
+  navigation: {
+    name: string
+    href: string
+  }[]
 }
 
 function ImageLogo({ src, alt }: { src: string; alt: string }) {
   return <Image width={32} height={32} src={src} alt={alt} />
 }
-
-const navigation = [
-  { name: 'Product', href: '/product' },
-  { name: 'Features', href: '/features' },
-  { name: 'Try Board ✨', href: '/board' },
-]
 
 export default function SimpleCentered({
   badge,
@@ -55,6 +53,7 @@ export default function SimpleCentered({
   logoAlt,
   logoSrc,
   main,
+  navigation,
   title,
   url,
 }: Props) {
