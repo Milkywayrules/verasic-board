@@ -15,8 +15,8 @@ export default function Home() {
       </Head>
 
       <main>
-        <h1 className="text-blue-800 font-black text-2xl">Title here</h1>
-        <p className="text-blue-600 font-medium text-lg">Description here</p>
+        <h1 className="text-2xl font-black text-blue-800">Title here</h1>
+        <p className="text-lg font-medium text-blue-600">Description here</p>
       </main>
     </>
   )
