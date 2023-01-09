@@ -9,7 +9,7 @@
  * It has to be a `.mjs`-file to be imported there.
  */
 import { serverSchema, serverEnv } from './schema.mjs'
-import { env as clientEnv, formatErrors } from './client.mjs'
+import envClient, { formatErrors } from './client.mjs'
 
 const _serverEnv = serverSchema.safeParse(serverEnv)
 
@@ -27,5 +27,6 @@ for (const key of Object.keys(_serverEnv.data)) {
   }
 }
 
-// eslint-disable-next-line import/prefer-default-export
-export const env = { ..._serverEnv.data, ...clientEnv }
+const envServer = { ..._serverEnv.data, ...envClient }
+
+export default envServer

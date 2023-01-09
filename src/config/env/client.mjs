@@ -35,4 +35,6 @@ for (const key of Object.keys(_clientEnv.data)) {
   }
 }
 
-export const env = _clientEnv.data
+const envClient = _clientEnv.data
+
+export default envClient
