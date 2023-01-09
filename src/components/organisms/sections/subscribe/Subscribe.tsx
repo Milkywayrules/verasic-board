@@ -62,8 +62,8 @@ export default function Subscribe() {
             Currently we closed this form and will be back soon
           </p>
 
-          <a
-            href="/"
+          <button
+            type="button"
             aria-label="Scroll down"
             className="mx-auto flex h-10 w-10 transform items-center justify-center rounded-full border border-gray-400 text-white duration-300 hover:scale-110 hover:border-teal-400 hover:text-teal-400 hover:shadow"
           >
@@ -76,7 +76,7 @@ export default function Subscribe() {
             >
               <path d="M10.293,3.293,6,7.586,1.707,3.293A1,1,0,0,0,.293,4.707l5,5a1,1,0,0,0,1.414,0l5-5a1,1,0,1,0-1.414-1.414Z" />
             </svg>
-          </a>
+          </button>
         </div>
       </div>
     </div>
