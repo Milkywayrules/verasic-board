@@ -1,0 +1,26 @@
+{
+  "extends": [
+    "eslint:recommended",
+    "airbnb",
+    "airbnb/hooks",
+    "next",
+    "next/core-web-vitals",
+    "plugin:@typescript-eslint/recommended",
+    "prettier"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint", "prettier"],
+  "root": true,
+  "rules": {
+    // 0 = off ; 1 = warn ; 2 = error
+    "prettier/prettier": 2,
+    "import/extensions": [2, "never", { "svg": "always", "json": "always", "css": "always" }],
+
+    // react
+    "react/jsx-filename-extension": [1, { "extensions": [".tsx"] }],
+    "react/require-default-props": 0,
+
+    // jsx-a11y
+    "jsx-a11y/no-autofocus": 0
+  }
+}
