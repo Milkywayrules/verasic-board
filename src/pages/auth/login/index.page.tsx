@@ -1,6 +1,11 @@
 import Link from 'next/link'
+import { FormEvent } from 'react'
 
 export default function Header() {
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
+  }
+
   return (
     <div className="overflow-hidden bg-gray-900">
       <div className="mx-auto flex min-h-screen justify-center px-4 py-24 sm:max-w-xl md:max-w-full md:px-24 lg:max-w-screen-xl lg:px-8 lg:py-20">
@@ -50,7 +55,7 @@ export default function Header() {
                 <h3 className="mb-4 text-xl font-semibold sm:mb-6 sm:text-center sm:text-2xl">
                   Welcome back 👋
                 </h3>
-                <form>
+                <form onSubmit={handleSubmit}>
                   <div className="mb-1 sm:mb-2">
                     {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
                     <label htmlFor="email" className="mb-1 inline-block font-medium">
