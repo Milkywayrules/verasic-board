@@ -21,7 +21,9 @@ export default function IndexCursorPage() {
   const others = useStoreLiveblocks(state => state.liveblocks.others)
   const othersCursors = others.map(user => user.presence.cursor) as SliceCursor['cursor'][]
 
+  // eslint-disable-next-line no-console
   console.log(JSON.stringify(othersCursors, null, 2))
+  // eslint-disable-next-line no-console
   console.log('cursor:', cursor)
 
   return (

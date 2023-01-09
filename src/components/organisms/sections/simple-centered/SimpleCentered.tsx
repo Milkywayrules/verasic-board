@@ -1,6 +1,8 @@
 import { Dialog } from '@headlessui/react'
 import Image from 'next/image'
+import Link from 'next/link'
 import { useState } from 'react'
+
 import { Icon } from '~components/atoms'
 
 interface Props {
@@ -34,17 +36,15 @@ interface Props {
       }
     }
   }
+  navigation: {
+    name: string
+    href: string
+  }[]
 }
 
 function ImageLogo({ src, alt }: { src: string; alt: string }) {
   return <Image width={32} height={32} src={src} alt={alt} />
 }
-
-const navigation = [
-  { name: 'Product', href: '/product' },
-  { name: 'Features', href: '/features' },
-  { name: 'Try Board ✨', href: '/board' },
-]
 
 export default function SimpleCentered({
   badge,
@@ -53,6 +53,7 @@ export default function SimpleCentered({
   logoAlt,
   logoSrc,
   main,
+  navigation,
   title,
   url,
 }: Props) {
@@ -92,10 +93,10 @@ export default function SimpleCentered({
         <div>
           <nav className="flex h-9 items-center justify-between" aria-label="Global">
             <div className="flex lg:min-w-0 lg:flex-1" aria-label="Global">
-              <a href={url.home} className="-m-1.5 p-1.5">
+              <Link href={url.home} className="-m-1.5 p-1.5">
                 <span className="sr-only">{companyName}</span>
                 <ImageLogo src={logoSrc} alt={logoAlt} />
-              </a>
+              </Link>
             </div>
             <div className="flex lg:hidden">
               <button
@@ -109,22 +110,22 @@ export default function SimpleCentered({
             </div>
             <div className="hidden lg:flex lg:min-w-0 lg:flex-1 lg:justify-center lg:gap-x-12">
               {navigation.map(item => (
-                <a
+                <Link
                   key={item.name}
                   href={item.href}
                   className="font-semibold text-gray-900 hover:text-gray-900"
                 >
                   {item.name}
-                </a>
+                </Link>
               ))}
             </div>
             <div className="hidden lg:flex lg:min-w-0 lg:flex-1 lg:justify-end">
-              <a
+              <Link
                 href={url.auth.login}
                 className="inline-block rounded-lg px-3 py-1.5 text-sm font-semibold leading-6 text-gray-900 shadow-sm ring-1 ring-gray-900/10 hover:ring-gray-900/20"
               >
                 Log in
-              </a>
+              </Link>
             </div>
           </nav>
 
@@ -135,10 +136,10 @@ export default function SimpleCentered({
             >
               <div className="flex h-9 items-center justify-between">
                 <div className="flex">
-                  <a href={url.home} className="-m-1.5 p-1.5">
+                  <Link href={url.home} className="-m-1.5 p-1.5">
                     <span className="sr-only">{companyName}</span>
                     <ImageLogo src={logoSrc} alt={logoAlt} />
-                  </a>
+                  </Link>
                 </div>
                 <div className="flex">
                   <button
@@ -155,22 +156,22 @@ export default function SimpleCentered({
                 <div className="-my-6 divide-y divide-gray-500/10">
                   <div className="space-y-2 py-6">
                     {navigation.map(item => (
-                      <a
+                      <Link
                         key={item.name}
                         href={item.href}
                         className="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-400/10"
                       >
                         {item.name}
-                      </a>
+                      </Link>
                     ))}
                   </div>
                   <div className="py-6">
-                    <a
+                    <Link
                       href={url.auth.login}
                       className="-mx-3 block rounded-lg py-2.5 px-3 text-base font-semibold leading-6 text-gray-900 hover:bg-gray-400/10"
                     >
                       Log in
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -187,10 +188,10 @@ export default function SimpleCentered({
                 <div className="relative overflow-hidden rounded-full py-1.5 px-4 text-sm leading-6 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
                   <span className="text-gray-600">
                     {badge.text}
-                    <a href={badge.cta.url} className="font-semibold text-indigo-600">
+                    <Link href={badge.cta.url} className="font-semibold text-indigo-600">
                       <span className="absolute inset-0" aria-hidden="true" /> {badge.cta.text}{' '}
                       <span aria-hidden="true">&rarr;</span>
-                    </a>
+                    </Link>
                   </span>
                 </div>
               </div>
@@ -203,7 +204,7 @@ export default function SimpleCentered({
                 <p className="mt-6 text-lg leading-8 text-gray-600 sm:text-center">{description}</p>
 
                 <div className="mt-8 flex gap-x-4 sm:justify-center">
-                  <a
+                  <Link
                     href={main.cta.primary.url}
                     className="inline-block rounded-lg bg-indigo-600 px-4 py-1.5 text-base font-semibold leading-7 text-white shadow-sm ring-1 ring-indigo-600 hover:bg-indigo-700 hover:ring-indigo-700"
                   >
@@ -211,8 +212,8 @@ export default function SimpleCentered({
                     <span className="text-indigo-200" aria-hidden="true">
                       &rarr;
                     </span>
-                  </a>
-                  <a
+                  </Link>
+                  <Link
                     href={main.cta.secondary.url}
                     className="inline-block rounded-lg px-4 py-1.5 text-base font-semibold leading-7 text-gray-900 ring-1 ring-gray-900/10 hover:ring-gray-900/20"
                   >
@@ -220,7 +221,7 @@ export default function SimpleCentered({
                     <span className="text-gray-400" aria-hidden="true">
                       &rarr;
                     </span>
-                  </a>
+                  </Link>
                 </div>
               </div>
 

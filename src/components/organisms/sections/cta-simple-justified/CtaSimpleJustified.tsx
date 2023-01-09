@@ -1,3 +1,7 @@
+import Link from 'next/link'
+
+import CONSTS from '~config/consts'
+
 export default function CtaSimpleJustified() {
   return (
     <div className="bg-gray-50 py-12">
@@ -8,24 +12,22 @@ export default function CtaSimpleJustified() {
         </h2>
 
         <div className="mt-8 flex gap-4 lg:mt-0 lg:flex-shrink-0">
-          {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-          <a
-            href="#"
+          <Link
+            href={CONSTS.url.auth.login}
             className="inline-block rounded-lg bg-indigo-600 px-4 py-1.5 text-base font-semibold leading-7 text-white shadow-sm ring-1 ring-indigo-600 hover:bg-indigo-700 hover:ring-indigo-700"
           >
             Try Board Now
             <span className="ml-2 text-indigo-200" aria-hidden="true">
               &rarr;
             </span>
-          </a>
+          </Link>
 
-          {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-          <a
-            href="#"
+          <Link
+            href={CONSTS.url.auth.login}
             className="inline-block rounded-lg px-4 py-1.5 text-base font-semibold leading-7 text-gray-900 ring-1 ring-gray-900/10 hover:ring-gray-900/20"
           >
             Our Motivation
-          </a>
+          </Link>
         </div>
       </div>
     </div>
