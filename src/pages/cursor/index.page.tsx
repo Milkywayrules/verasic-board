@@ -1,7 +1,10 @@
 import { useEffect } from 'react'
 
-import useStoreLiveblocks from '~store/liveblocks'
-import { SliceCursor } from '~store/liveblocks/useStoreCursor'
+import CONSTS from '~config/consts'
+import { getRoomIdByEnv } from '~libs/multiplayer'
+import useStoreLiveblocks, { SliceCursor } from '~store/liveblocks'
+
+const roomId = getRoomIdByEnv(CONSTS.multiplayer.roomIdMap.cursor.name)
 
 export default function IndexCursorPage() {
   const {
@@ -9,9 +12,9 @@ export default function IndexCursorPage() {
   } = useStoreLiveblocks()
 
   useEffect(() => {
-    enterRoom('room-cursor-demo')
+    enterRoom(roomId)
     return () => {
-      leaveRoom('room-cursor-demo')
+      leaveRoom(roomId)
     }
   }, [enterRoom, leaveRoom])
 
@@ -22,7 +25,7 @@ export default function IndexCursorPage() {
   const othersCursors = others.map(user => user.presence.cursor) as SliceCursor['cursor'][]
 
   // eslint-disable-next-line no-console
-  console.log(JSON.stringify(othersCursors, null, 2))
+  // console.log(JSON.stringify(othersCursors, null, 2))
   // eslint-disable-next-line no-console
   console.log('cursor:', cursor)
 
@@ -43,7 +46,7 @@ export default function IndexCursorPage() {
         </table>
       </div>
 
-      {othersCursors.map(other => (
+      {/* {othersCursors.map(other => (
         <div
           key={`${other.x}+${other.y}`}
           className="m-2 w-fit rounded bg-gray-200 px-2 py-4 shadow-md"
@@ -58,7 +61,7 @@ export default function IndexCursorPage() {
             </tr>
           </table>
         </div>
-      ))}
+      ))} */}
     </div>
   )
 }

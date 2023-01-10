@@ -1,9 +1,11 @@
 import { createClient } from '@liveblocks/client'
 
-import { envClient } from '~config/env'
+import envClient from '~config/env/client.mjs'
 
-const clientLiveblocks = createClient({
-  publicApiKey: envClient.NEXT_PUBLIC_LIVEBLOCKS_PUB_KEY,
+export const clientLiveblocks = createClient({
+  authEndpoint: '/api/multiplayer/auth',
 })
 
-export default clientLiveblocks
+export const clientLiveblocksPublic = createClient({
+  publicApiKey: envClient.NEXT_PUBLIC_LIVEBLOCKS_PUBLIC_KEY,
+})
