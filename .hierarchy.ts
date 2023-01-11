@@ -1,5 +1,6 @@
 export type CardType = 'bug' | 'task' | 'story'
 type ColumnName =
+  | 'Idea'
   | 'Product Backlog'
   | 'Sprint Backlog'
   | 'To-do'
