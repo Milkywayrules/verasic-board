@@ -2,7 +2,7 @@ import classNames from 'classnames'
 import { ReactNode } from 'react'
 
 import { Icon } from '~commons/components/atoms'
-import { Union } from '~libs/type'
+import { Union } from '~commons/type'
 
 type Props2 = Union.StrictUnion<
   | { isSpecial: true; content?: ReactNode }

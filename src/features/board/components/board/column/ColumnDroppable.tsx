@@ -2,7 +2,7 @@ import classNames from 'classnames'
 import { forwardRef, ReactNode } from 'react'
 import { DroppableProvided } from 'react-beautiful-dnd'
 
-import { Union } from '~libs/type'
+import { Union } from '~commons/type'
 import Column from './Column'
 
 type Props = Union.StrictUnion<
