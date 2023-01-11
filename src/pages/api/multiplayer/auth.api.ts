@@ -1,7 +1,7 @@
 import { authorize } from '@liveblocks/node'
 import { NextApiRequest, NextApiResponse } from 'next'
-import CONSTS from '~config/consts'
 
+import CONSTS from '~config/consts'
 import envServer from '~config/env/server.mjs'
 import { getRoomIdByEnv } from '~libs/multiplayer'
 
@@ -50,6 +50,7 @@ export default async function auth(req: NextApiRequest, res: NextApiResponse) {
     },
   })
 
+  // eslint-disable-next-line no-console
   console.log('status:', result.status, 'room:', room)
 
   return res.status(result.status).json(JSON.parse(result.body))
