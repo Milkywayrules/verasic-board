@@ -18,8 +18,12 @@
     "strictNullChecks": true,
     "baseUrl": ".",
     "paths": {
+      "~commons/*": ["src/commons/*"],
+      "~features/*": ["src/features/*"],
+
+      // some of them will be deprecated and replaced by feature - common separation
       "~mocks/*": ["src/__mocks__/*"],
-      "~components/*": ["src/components/*"],
+      // "~components/*": ["src/components/*"],
       "~config/*": ["src/config/*"],
       "~data-access/*": ["src/data-access/*"],
       "~data-mapper/*": ["src/data-mapper/*"],
@@ -29,6 +33,14 @@
       "~store/*": ["src/store/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "**/*.cjs", "**/*.mjs", ".hierarchy.ts"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.d.ts",
+    "**/*.tsx",
+    "**/*.cjs",
+    "**/*.mjs",
+    ".hierarchy.ts"
+  ],
   "exclude": ["node_modules"]
 }

@@ -1,6 +1,6 @@
 import { ForwardedRef, forwardRef } from 'react'
 
-import { SpinnerSize, SpinnerVariant } from './type'
+import { SpinnerSize, SpinnerVariant } from './type.d'
 import { getSizeClassName, getVariantClassName } from './utils'
 
 interface Props {

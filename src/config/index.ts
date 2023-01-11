@@ -1,1 +1,3 @@
-export * from './env'
+import CONSTS from './consts'
+
+export { CONSTS }

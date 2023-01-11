@@ -1,5 +1,5 @@
-import { Sections } from '~components/organisms'
 import CONSTS from '~config/consts'
+import { Sections } from '~commons/components'
 
 export default function IndexPage() {
   return (

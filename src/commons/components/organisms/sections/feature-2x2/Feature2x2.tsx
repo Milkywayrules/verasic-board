@@ -1,4 +1,4 @@
-import { Icon, Model } from '~components/atoms'
+import { Icon, Model } from '~commons/components/atoms'
 
 interface Feature {
   name: string

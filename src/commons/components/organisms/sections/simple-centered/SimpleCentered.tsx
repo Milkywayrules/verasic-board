@@ -3,7 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { useState } from 'react'
 
-import { Icon } from '~components/atoms'
+import { Icon } from '~commons/components/atoms'
 
 interface Props {
   url: {
