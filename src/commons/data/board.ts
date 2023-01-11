@@ -5,6 +5,11 @@ export const boardData: Board = {
   name: 'ASL Marketplace',
   columns: [
     {
+      id: 'column-0',
+      name: 'Idea',
+      cards: [],
+    },
+    {
       id: 'column-1',
       name: 'Product Backlog',
       cards: [
