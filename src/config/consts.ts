@@ -20,7 +20,7 @@ const CONSTS = {
     auth: {
       login: '/auth/login',
     },
-    board: '/board',
+    board: '/dashboard/board',
     __cursor: '/cursor',
     home: '/',
   },
