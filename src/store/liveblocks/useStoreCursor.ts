@@ -1,4 +1,4 @@
-import { StoreCreatorWithLiveblocks } from './type'
+import { StoreCreatorWithLiveblocks } from './type.d'
 
 type Cursor = { x: number; y: number }
 

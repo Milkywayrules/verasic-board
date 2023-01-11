@@ -2,6 +2,6 @@
 interface Props {}
 
 // eslint-disable-next-line no-empty-pattern
-export default function IndexBoardPage({}: Props) {
-  return 'HALO'
+export default function IndexDashboardPage({}: Props) {
+  return 'dashboard'
 }

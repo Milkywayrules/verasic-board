@@ -1,7 +1,10 @@
 import { useEffect } from 'react'
 
-import useStoreLiveblocks from '~store/liveblocks'
-import { SliceCursor } from '~store/liveblocks/useStoreCursor'
+import CONSTS from '~config/consts'
+import { getRoomIdByEnv } from '~libs/multiplayer'
+import useStoreLiveblocks, { SliceCursor } from '~store/liveblocks'
+
+const roomId = getRoomIdByEnv(CONSTS.multiplayer.roomIdMap.cursor.name)
 
 export default function IndexCursorPage() {
   const {
@@ -9,9 +12,9 @@ export default function IndexCursorPage() {
   } = useStoreLiveblocks()
 
   useEffect(() => {
-    enterRoom('room-cursor-demo')
+    enterRoom(roomId)
     return () => {
-      leaveRoom('room-cursor-demo')
+      leaveRoom(roomId)
     }
   }, [enterRoom, leaveRoom])
 

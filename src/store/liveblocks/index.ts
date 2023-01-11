@@ -1,7 +1,7 @@
 import { liveblocks, WithLiveblocks } from '@liveblocks/zustand'
 import create from 'zustand'
 
-import clientLiveblocks from './client'
+import { clientLiveblocks } from './client'
 import { SliceCursor, storeCursor } from './useStoreCursor'
 
 type Slices = SliceCursor
@@ -24,3 +24,7 @@ const useStoreLiveblocks = create<WithLiveblocks<Slices>>()(
 )
 
 export default useStoreLiveblocks
+
+export * from './client'
+export * from './type.d'
+export * from './useStoreCursor'
